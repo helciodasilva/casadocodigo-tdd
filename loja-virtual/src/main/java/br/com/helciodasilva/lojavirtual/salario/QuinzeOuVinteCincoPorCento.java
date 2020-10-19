@@ -1,10 +1,18 @@
 package br.com.helciodasilva.lojavirtual.salario;
 
-public class QuinzeOuVinteCincoPorCento implements RegraDeCalculo {
-	public double calcula(Funcionario funcionario) {
-		if (funcionario.getSalario() < 2500) {
-			return funcionario.getSalario() * 0.85;
-		}
-		return funcionario.getSalario() * 0.75;
+public class QuinzeOuVinteCincoPorCento extends RegraDeCalculo {
+	@Override
+	protected int limite() {
+		return 2500;
+	}
+
+	@Override
+	protected double porcentagemAcimaDoLimite() {
+		return 0.85;
+	}
+
+	@Override
+	protected double porcentagemBase() {
+		return 0.75;
 	}
 }
