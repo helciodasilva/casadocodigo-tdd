@@ -1,6 +1,9 @@
 package br.com.helciodasilva.lojavirtual.notafiscal;
 
-public class NFDao {
-	public void persiste(NotaFiscal nf) {
+public class NFDao implements AcaoAposGerarNota {
+
+	@Override
+	public void executa(NotaFiscal nf) {
+
 	}
 }

@@ -1,7 +1,9 @@
 package br.com.helciodasilva.lojavirtual.notafiscal;
 
-public class SAP {
-	public void envia(NotaFiscal nf) {
+public class SAP implements AcaoAposGerarNota {
+
+	@Override
+	public void executa(NotaFiscal nf) {
 	}
 
 }
