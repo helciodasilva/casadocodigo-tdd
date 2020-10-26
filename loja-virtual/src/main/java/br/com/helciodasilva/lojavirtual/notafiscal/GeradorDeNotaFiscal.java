@@ -8,6 +8,11 @@ public class GeradorDeNotaFiscal {
 	private final Relogio relogio;
 	private Tabela tabela;
 
+	public GeradorDeNotaFiscal(List<AcaoAposGerarNota> acoes, Tabela tabela) {
+		this(acoes);
+		this.tabela = tabela;
+	}
+	
 	public GeradorDeNotaFiscal(List<AcaoAposGerarNota> acoes, Relogio relogio, Tabela tabela) {
 		this.acoes = acoes;
 		this.relogio = relogio;
